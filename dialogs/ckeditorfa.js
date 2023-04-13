@@ -59,7 +59,7 @@ CKEDITOR.dialog.add('ckeditorFaDialog', function (editor) {
                     children: [
                         {
                             type: 'select',
-                            id: 'colorChooser',
+                            id: 'color',
                             className: 'colorChooser',
                             label: 'Brand color',
                             items: [
@@ -71,14 +71,13 @@ CKEDITOR.dialog.add('ckeditorFaDialog', function (editor) {
                                 ['Brand danger', 'color-brand-danger']
                             ],
                             setup: function (widget) {
+                                console.log(widget);
                                 this.setValue(widget.data.color ? widget.data.color : '');
                             },
                             commit: function (widget) {
+                                console.log(widget);
                                 widget.setData('color', this.getValue());
                             },
-                            onChange: function () {
-                                var selectedBrand = this.getValue();
-                            }
                         },
                         {
                             type: 'text', id: 'size', className: 'size', label: 'Size', setup: function (widget) { this.setValue(widget.data.size); },
@@ -143,7 +142,11 @@ CKEDITOR.dialog.add('ckeditorFaDialog', function (editor) {
         }],
         onOk: function () {
             clear();
-            var dialog = this, icon = editor.document.createElement('span'), cls = '';
+
+            var dialog = this;
+            var icon = editor.document.createElement('span');
+            var cls = '';
+
             if (dialog.getValueOf('font-awesome', 'fixwidth') == "Yes") cls += ' fa-fw';
             if (dialog.getValueOf('font-awesome', 'bordered') == "Yes") cls += ' fa-border';
             if (dialog.getValueOf('font-awesome', 'spinning') == "Yes") cls += ' fa-spin';
