@@ -1,16 +1,26 @@
-# ckeditorfa6
-ckeditor fontAwesome 6 plugin with Font Awesome free v.6.x (current branch is compatible with Font Awesome **v.6**)
+# Jamie's Fork of ckeditorfa6
+This is a fork of ckeditorfa6, [original repo](https://github.com/ed3/ckeditorfa).
 
-# settings
-1. add in your html page all.min.css
+### Fork
+when a colour is chosed, a class is appended to the icon, one of the following classes:
+- color-brand-primary
+- color-brand-success
+- color-brand-info
+- color-brand-warning
+- color-brand-danger
+
+so to assign a colour to the class, put into your css file:
+.color-brand-x {
+   color: color;
+}
+
+### Info
+fa6
+
+### Setup
+1. add the fa file of all.min.css to your html page
 2. add in your config.js from ckeditor folder:
-   - config.extraPlugins = 'ckeditorfa';
-   - config.allowedContent = true;
-   - config.contentsCss = '/{your_path}/all.min.css';
-
+   config.extraPlugins = 'ckeditorfa';
+   config.allowedContent = true;
+   config.contentsCss = '/{your_path}/all.min.css';
 CKEDITOR.dtd.$removeEmpty['span'] = false;
-
-# info
-for Font Awesome v.4.7 use branch **fa4**
-
-for Font Awesome v.5.15 use branch **fa5**
