@@ -18,9 +18,9 @@ so to assign a colour to the class, put into your css file:
 fa6
 
 ### Setup
-1. add the fa file of all.min.css to your html page
+1. add the cdn of all.min.css to your html page, see example
 2. add in your config.js from ckeditor folder:
-   config.extraPlugins = 'ckeditorfa';
-   config.allowedContent = true;
-   config.contentsCss = '/{your_path}/all.min.css';
+   config.extraPlugins = 'ckeditorfa';\n
+   config.allowedContent = true;\n
+   config.contentsCss = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";\n
 CKEDITOR.dtd.$removeEmpty['span'] = false;
