@@ -1,7 +1,12 @@
 # Jamie's Fork of ckeditorfa6
-This is a fork of ckeditorfa6, [original repo](https://github.com/ed3/ckeditorfa).
+This is a fork of ckeditorfa6, [original repo](https://github.com/ed3/ckeditorfa). 
+
+https://youtu.be/6OUS7INrdRw
+https://i.imgur.com/2drRiHz.png
 
 ### Fork
+PS: Customise the /icons folder to set an icon, name your icon ckeditorfa
+
 when a colour is chosed, a class is appended to the icon, one of the following classes:
 - color-brand-primary
 - color-brand-success
